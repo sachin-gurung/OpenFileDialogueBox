@@ -8,11 +8,15 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
+using System.IO;
 
 namespace FileOpenDialogBox {
     /// <summary>
@@ -23,21 +27,17 @@ namespace FileOpenDialogBox {
             InitializeComponent();
         }
 
-        private void folderSelect_GotFocus(object sender, RoutedEventArgs e) {
-            // Configure open file dialog box
-            var dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.FileName = "Document"; // Default file name
-            dialog.DefaultExt = ".txt"; // Default file extension
-            dialog.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
-
-            // Show open file dialog box
-            bool? result = dialog.ShowDialog();
-
-            // Process open file dialog box results
-            if (result == true) {
-                // Open document
-                string filename = dialog.FileName;
-            }
+        private void submitButton_Click(object sender, RoutedEventArgs e) {
+            // Configure save file dialog box
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = FileNameBox.Text; // Default file name
+            saveFileDialog.DefaultExt = ".txt"; // Default file extension
+            saveFileDialog.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
+            saveFileDialog.InitialDirectory = @"D:\temp\";
+            if (saveFileDialog.ShowDialog() == true)
+                File.WriteAllText(saveFileDialog.FileName, TextBox.Text);
+                FileNameBox.Clear();
+                TextBox.Clear();
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e) {
@@ -46,7 +46,6 @@ namespace FileOpenDialogBox {
 
         private void clearButton_Click(Object sender, RoutedEventArgs e) {
             FileNameBox.Clear();
-            FolderSelect.Clear();
             TextBox.Clear();
             }
         }
