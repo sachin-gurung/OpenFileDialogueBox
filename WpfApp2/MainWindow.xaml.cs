@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FileOpenDialogBox.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp2 {
+namespace FileOpenDialogBox {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -38,5 +39,16 @@ namespace WpfApp2 {
                 string filename = dialog.FileName;
             }
         }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e) {
+            Window.GetWindow(this).Close();
+        }
+
+        private void clearButton_Click(Object sender, RoutedEventArgs e) {
+            FileNameBox.Clear();
+            FolderSelect.Clear();
+            TextBox.Clear();
+            }
+        }
     }
-}
+

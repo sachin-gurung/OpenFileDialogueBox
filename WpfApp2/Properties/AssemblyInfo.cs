@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WpfApp2")]
+[assembly: AssemblyTitle("FileOpenDialogBox")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NAVSEA Keyport")]
-[assembly: AssemblyProduct("WpfApp2")]
+[assembly: AssemblyProduct("FileOpenDialogBox")]
 [assembly: AssemblyCopyright("Copyright © NAVSEA Keyport 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
