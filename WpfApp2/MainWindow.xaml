@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileOpenDialogBox"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="450" ResizeMode="NoResize" >
+        mc:Ignorable="d" Title="Text Document Creator" Height="400" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
@@ -22,22 +21,31 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Background="#FF182EE0"/>
         <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Padding="0,0,15,0">
             File Name
         </TextBlock>
-        <TextBox Name="FileNameBox" Text="{Binding UserInputModel.FileNameBox}" Grid.Column="2" Grid.Row="1" Height="20" Grid.ColumnSpan="2"/>
+        <TextBox Name="FileNameBox" Text="{Binding UserInputModel.FileNameBox}" Grid.Column="2" Grid.Row="1" Height="20" Grid.ColumnSpan="2" BorderThickness="2,2,2,2" BorderBrush="Black"/>
         <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Padding="0,0,15,0">
             Text
         </TextBlock>
-        <TextBox Name="TextBox" Text="{Binding UserInputModel.TextBox}" Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" AcceptsReturn="True"/>
-        <Button x:Name="SubmitButton" Grid.Column="1" Grid.Row="4" Margin="20,20,20,20" FontWeight="Bold" FontSize="20" Click="submitButton_Click">
+        <TextBox Name="TextBox" Text="{Binding UserInputModel.TextBox}" Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" AcceptsReturn="True" BorderBrush="Black" BorderThickness="2,2,2,2"/>
+        <Button x:Name="SubmitButton" Grid.Column="1" Grid.Row="4" Margin="20,20,20,20" FontWeight="Bold" FontSize="20" Click="submitButton_Click" Background="#FFADA8A8">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
             Submit
         </Button>
-        <Button x:Name="ClearButton" Grid.Column="2" Grid.Row="4" Margin="20,20,20,20" FontWeight="Bold" FontSize="20" Click="clearButton_Click">
+        <Button x:Name="ClearButton" Grid.Column="2" Grid.Row="4" Margin="20,20,20,20" FontWeight="Bold" FontSize="20" Click="clearButton_Click" Background="#FFADA8A8">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
             Clear
         </Button>
-        <Button x:Name="CloseButton" Grid.Column="3" Grid.Row="4" Margin="20,20,20,20" FontWeight="Bold" FontSize="20" Click="closeButton_Click">
+        <Button x:Name="CloseButton" Grid.Column="3" Grid.Row="4" Margin="20,20,20,20" FontWeight="Bold" FontSize="20" Click="closeButton_Click" Background="#FFADA8A8">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
             Close
         </Button>
     </Grid>
