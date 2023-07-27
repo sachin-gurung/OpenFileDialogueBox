@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 using System.IO;
+using WpfApp2.ViewModel.MainViewModel;
 
 namespace FileOpenDialogBox {
     /// <summary>
@@ -28,16 +29,7 @@ namespace FileOpenDialogBox {
         }
 
         private void submitButton_Click(object sender, RoutedEventArgs e) {
-            // Configure save file dialog box
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.FileName = FileNameBox.Text; // Default file name
-            saveFileDialog.DefaultExt = ".txt"; // Default file extension
-            saveFileDialog.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
-            saveFileDialog.InitialDirectory = @"D:\temp\";
-            if (saveFileDialog.ShowDialog() == true)
-                File.WriteAllText(saveFileDialog.FileName, TextBox.Text);
-                FileNameBox.Clear();
-                TextBox.Clear();
+            (DataContext as MainViewModel).UserModel.SubmitButtonClick(); 
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e) {
@@ -45,8 +37,7 @@ namespace FileOpenDialogBox {
         }
 
         private void clearButton_Click(Object sender, RoutedEventArgs e) {
-            FileNameBox.Clear();
-            TextBox.Clear();
+            (DataContext as MainViewModel).UserModel.ClearButtonClick();
             }
         }
     }

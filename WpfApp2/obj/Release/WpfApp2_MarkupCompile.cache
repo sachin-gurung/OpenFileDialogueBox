@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Debug\
+C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Release\
 WpfApp2
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\App.xaml
 1219584333
 
-7571659375
+6-1641219303
 151937372271
 MainWindow.xaml;
 

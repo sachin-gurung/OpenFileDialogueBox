@@ -14,3 +14,4 @@ C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Debug\WpfApp2.
 C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
 C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Debug\FileOpenDialogBox.csproj.GenerateResource.cache
 C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Debug\FileOpenDialogBox.csproj.CoreCompileInputs.cache
+C:\Users\sachin.gurung\source\repos\OpenFileDialogBox\WpfApp2\obj\Debug\GeneratedInternalTypeHelper.g.cs
